@@ -27,11 +27,9 @@ class SearchBar extends React.Component {
                         <img src="https://banner2.cleanpng.com/20180511/qkw/kisspng-monumental-restaurant-logo-cafe-5af54f48cfbed6.7759304615260260568509.jpg" width="50" height="30" alt=""/>
                     </Link>
                     <input className="form-control" type="text" placeholder="Search Recipes Here" aria-label="default input example" value={this.context.term} onChange={this.onValueChange}></input>
-                    <Link to="/">
                     <div className="input-group-append">
                         <button className="btn btn-outline-primary" type="submit">Search</button>
                     </div>
-                    </Link>
                     <div className="input-group-append">
                         <Link class="nav-link" to="/cart">Cart</Link>
                     </div>
