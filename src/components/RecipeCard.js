@@ -6,7 +6,7 @@ class RecipeCard extends React.Component {
 
     state={
         ingredients: '',
-        healthLabels: ''
+        healthLabels: '',
     }
 
     componentDidMount(){
@@ -15,6 +15,10 @@ class RecipeCard extends React.Component {
             healthLabels: this.props.item.recipe.healthLabels.join(', ')
         })
         console.log(this.state.healthLabels)
+    }
+
+    onAddingCart = ()=>{
+        this.props.addingToCart(this.props.item)
     }
 
     render(){
@@ -28,7 +32,8 @@ class RecipeCard extends React.Component {
             <div className="card-body">
                 <h5 className="title">{this.props.item.recipe.label}</h5>
                 <p className="card-text">{this.state.ingredients}</p>
-                <a href={this.props.item.recipe.url} className="btn btn-primary">Recipe</a>
+                <a href={this.props.item.recipe.url} className="btn btn-primary">Build Yourself</a>
+                <button className="btn btn-secondary" onClick={this.onAddingCart}>Add to cart</button>
             </div>
         </div>
         )

@@ -7,7 +7,7 @@ const RecipeList = (props)=>{
         <div className="container">
         <div className="row">
         {props.recipes.map(item => (
-            <RecipeCard item={item}/>
+            <RecipeCard item={item} addingToCart={props.addingToCart}/>
         ))}
         </div>
     </div>
